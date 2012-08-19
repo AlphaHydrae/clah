@@ -1,0 +1,17 @@
+{
+  "name": "clah",
+  "description": "Simple Javascript Inheritance by John Resig",
+  "keywords": [
+    "javascript",
+    "inheritance",
+    "class",
+    "klass"
+  ],
+  "version": "1.0.0",
+  "homepage": "https://github.com/AlphaHydrae/clah",
+  "author": "Alpha Hydrae",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlphaHydrae/clah"
+  }
+}
