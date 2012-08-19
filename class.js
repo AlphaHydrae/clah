@@ -61,4 +61,31 @@ Class.extend = function(prop) {
   return Class;
 };
 
-module.exports = Class;
+/*
+ * Additions by Alpha Hydrae (https://github.com/AlphaHydrae)
+ */
+
+var Base = Class.extend({
+
+  callback : function(method) {
+
+    var addArgs = Array.prototype.slice.call(arguments, 1);
+    addArgs.splice(0, 0, 0, 0);
+
+    var func = typeof(method) == 'function' ? method : this[method];
+    var self = this;
+
+    return function() {
+
+      var args = Array.prototype.slice.call(arguments);
+      Array.prototype.splice.apply(args, addArgs);
+      
+      func.apply(self, args);
+    };
+  }
+});
+
+// Provide original version.
+Base.Class = Class;
+
+module.exports = Base;
