@@ -8,7 +8,7 @@ DEPS = {
 }
 
 ROOT = File.expand_path File.dirname(__FILE__)
-SRC = ROOT
+SRC = File.join ROOT, 'lib'
 
 def script_path dep
   File.join ROOT, 'node_modules', dep, 'bin', DEPS[dep]
@@ -31,7 +31,7 @@ end
 
 # version tasks
 RakeVersion::Tasks.new do |v|
-  v.copy 'class.js', 'package.json'
+  v.copy File.join(SRC, 'class.js'), 'package.json'
 end
 
 task :validate_presence_of_deps do |t|
