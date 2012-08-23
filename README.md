@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/AlphaHydrae/clah.png)](http://travis-ci.org/AlphaHydrae/clah)
 # clah
 
 **Simple JavaScript Inheritance by John Resig**
