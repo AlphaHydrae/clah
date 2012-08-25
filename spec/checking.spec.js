@@ -20,13 +20,13 @@ describe("CHECKING", function() {
       }).not.toThrow();
     });
 
-    it("should accept the name of a function", function() {
+    it("should accept the name of a method", function() {
       expect(function() {
         earth.callback('hello');
       }).not.toThrow();
     });
 
-    it("should not accept an unknown function name", function() {
+    it("should not accept an unknown method name", function() {
       expect(function() {
         earth.callback('unknown');
       }).toThrow();
@@ -38,6 +38,15 @@ describe("CHECKING", function() {
           earth.callback(invalid);
         }).toThrow();
       });
+    });
+
+    it("should warn that a method name is unknown", function() {
+      try {
+        earth.callback('unknown');
+        expect(false).toBe(true);
+      } catch (err) {
+        expect(err.message).toBe('Callback error: this object has no method "unknown"');
+      }
     });
   });
 });
