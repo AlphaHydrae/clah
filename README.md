@@ -13,7 +13,7 @@ var Person = Class.extend({
     this.name = name;
   },
 
-  // use instance properties
+  // you can use instance properties in your methods
   hello : function() {
     console.log("Hello, I'm " + this.name + "!");
   }
@@ -38,6 +38,11 @@ var callback = jane.callback('hello');
 // you can use this callback anywhere, it will always be bound to the instance
 callback();   // #=> "Hello, I'm Jane!"
 ```
+
+Clah is tested with [Jasmine](http://pivotal.github.com/jasmine/) and [Travis CI](http://travis-ci.org).
+
+* master [![Build Status](https://secure.travis-ci.org/AlphaHydrae/clah.png?branch=master)](http://travis-ci.org/AlphaHydrae/clah)
+* develop [![Build Status](https://secure.travis-ci.org/AlphaHydrae/clah.png?branch=develop)](http://travis-ci.org/AlphaHydrae/clah)
 
 ## Installation
 
