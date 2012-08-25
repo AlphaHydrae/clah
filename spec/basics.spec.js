@@ -1,7 +1,6 @@
 
-var _ = require('underscore');
-
-var Class = require('../lib/class.min.js');
+var _ = require('underscore'),
+    Class = require('../lib/class.min.js');
 
 describe("Class", function() {
   
