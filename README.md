@@ -1,8 +1,31 @@
 # clah
 
-**Simple JavaScript Inheritance by John Resig**
+**Simple JavaScript Inheritance with bound callbacks**
 
 All credit for the inheritance system goes to John Resig. I adapted it to work both with [Node.js](http://nodejs.org) or in a browser, and added a function to generate bound callbacks.
+
+```js
+var Person = Class.extend({
+
+  init : function(name) {
+    this.name = name;
+  },
+
+  hello : function() {
+    console.log("Hello, I'm " + this.name + "!");
+  }
+});
+
+var Pirate = Person.extend({
+
+  hello : function() {
+    console.log("Ahoy! Me be " + this.name + ".");
+  }
+});
+
+new Person('Jim').hello();    // #=> "Hello, I'm Jim!"
+new Pirate('John').hello();   // #=> "Ahoy! Me be John."
+```
 
 ## Installation
 
