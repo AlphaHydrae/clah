@@ -5,8 +5,10 @@
 All credit for the inheritance system goes to John Resig. I adapted it to work both with [Node.js](http://nodejs.org) or in a browser, and added a function to generate bound callbacks.
 
 ```js
+// define a class
 var Person = Class.extend({
 
+  // this is the constructor
   init : function(name) {
     this.name = name;
   },
@@ -16,8 +18,10 @@ var Person = Class.extend({
   }
 });
 
+// define a subclass
 var Pirate = Person.extend({
 
+  // you can override methods
   hello : function() {
     console.log("Ahoy! Me be " + this.name + ".");
   }
@@ -25,6 +29,12 @@ var Pirate = Person.extend({
 
 new Person('Jim').hello();    // #=> "Hello, I'm Jim!"
 new Pirate('John').hello();   // #=> "Ahoy! Me be John."
+
+// create a bound callback
+var jane = new Person('Jane');
+var callback = jane.callback('hello');
+
+callback();   // #=> "Hello, I'm Jane!"
 ```
 
 ## Installation
