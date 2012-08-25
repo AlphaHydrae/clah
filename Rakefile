@@ -25,7 +25,7 @@ end
 
 desc 'Run test suite.'
 task :spec => [ :validate_presence_of_deps ] do |t|
-  result = system %/#{script_path 'jasmine-node'} #{File.join ROOT, 'spec'}/
+  result = system %/#{script_path 'jasmine-node'} #{File.join ROOT, 'spec'} --verbose/
   fail 'Test suite failed.' unless result
 end
 
