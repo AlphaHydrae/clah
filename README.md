@@ -13,6 +13,7 @@ var Person = Class.extend({
     this.name = name;
   },
 
+  // use instance properties
   hello : function() {
     console.log("Hello, I'm " + this.name + "!");
   }
@@ -34,6 +35,7 @@ new Pirate('John').hello();   // #=> "Ahoy! Me be John."
 var jane = new Person('Jane');
 var callback = jane.callback('hello');
 
+// you can use this callback anywhere, it will always be bound to the instance
 callback();   // #=> "Hello, I'm Jane!"
 ```
 
