@@ -39,7 +39,7 @@ var callback = jane.callback('hello');
 callback();   // #=> "Hello, I'm Jane!"
 ```
 
-Clah is tested with [Jasmine](http://pivotal.github.com/jasmine/) and [Travis CI](http://travis-ci.org).
+Clah is tested with [Jasmine](https://jasmine.github.io/) and [Travis CI](http://travis-ci.org).
 
 * master [![Build Status](https://secure.travis-ci.org/AlphaHydrae/clah.png?branch=master)](http://travis-ci.org/AlphaHydrae/clah)
 * develop [![Build Status](https://secure.travis-ci.org/AlphaHydrae/clah.png?branch=develop)](http://travis-ci.org/AlphaHydrae/clah)
